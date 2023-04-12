@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="/Css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="topnav">
+      <a class="active1" href="#home">Home</a>
+      <a href="#news">Visit</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+    </div>
+
+    <div class="container1">
+      <img src="/images/taj.jpg" height="700px" width="100%" />
+      <button class="btn">View More</button>
+    </div>
+
+    <div class="div2">
+      <img id="deer" src="/images/india.webp" height="300px" width="40%" />
+      <h2 id="div2text">
+        <b>
+          Visit More Places<br />
+          <button class="btn1">CLick Here</button>
+        </b>
+      </h2>
+    </div>
+
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <img src="images/temple.jpg" style="width: 100%" />
+      </div>
+
+      <div class="mySlides fade">
+        <img src="images/amiritsar.jpg" style="width: 100%" />
+      </div>
+
+      <div class="mySlides fade">
+        <img src="images/jaypur.jpg" style="width: 100%" />
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+
+    <div class="div3">
+      <h2 id="div3text">
+        <b>
+        More about Monuments.<br />
+          <button class="btn1">CLick Here</button>
+        </b>
+      </h2>
+      <img id="deer1" src="/images/circle.jpg" height="300px" width="40%" />
+    </div>
+
+    <div class="footer">
+      <h2 id="div4text">
+        <b>
+          <h2 id="cr">
+            Github:
+            <a href="https://github.com/Mayurrajput97">@Mayurrajput97</a>
+          </h2>
+          <br />
+        </b>
+      </h2>
+    </div>
+  </body>
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides((slideIndex += n));
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      if (n > slides.length) {
+        slideIndex = 1;
+      }
+      if (n < 1) {
+        slideIndex = slides.length;
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[slideIndex - 1].style.display = "block";
+    }
+  </script>
+</html>
